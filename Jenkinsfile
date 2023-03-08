@@ -8,8 +8,19 @@ pipeline {
     }
 
     stage('List Content') {
-      steps {
-        sh 'ls -la'
+      parallel {
+        stage('List Content') {
+          steps {
+            sh 'ls -la'
+          }
+        }
+
+        stage('') {
+          steps {
+            mail(subject: 'From Jenkins - FCC', body: 'This is a test email. Please ignore', from: 'jenkins@fcc-arjun.com', to: 'mallikarjun.somanakatti@gmail.com')
+          }
+        }
+
       }
     }
 
