@@ -7,7 +7,7 @@ pipeline {
       }
     }
 
-    stage('') {
+    stage('List Content') {
       steps {
         sh 'ls -la'
       }
