@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Checkout Code') {
       steps {
-        git(url: 'https://github.com/itsmpython/flask_blog/tree', branch: 'dev')
+        git(url: 'https://github.com/itsmpython/flask_blog', branch: 'dev')
       }
     }
 
