@@ -42,5 +42,13 @@ echo \'Refer to the DOCKERHUB_USERNAME & DOCKERHUB_PASSWORD env variables in set
       }
     }
 
+    stage('Push/Deploy to Dockerhub') {
+      steps {
+        sh '''echo \'This step deploys the image to docker container\'
+echo \'Docker command is --> docker push username/github-folder:latest\'
+'''
+      }
+    }
+
   }
 }
