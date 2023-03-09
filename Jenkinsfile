@@ -26,7 +26,7 @@ pipeline {
 
     stage('Build') {
       steps {
-        sh 'dockere build Dockerfile .'
+        sh 'echo \'Docker Build Steps here\''
       }
     }
 
