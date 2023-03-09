@@ -31,8 +31,14 @@ pipeline {
     }
 
     stage('Login to Dockerhub') {
+      environment {
+        DOCKERHUB_USERNAME = 'username'
+        DOCKERHUB_PASSWORD = 'password'
+      }
       steps {
-        sh 'echo \'This step logs system into Dockerhub or any of your destination server\''
+        sh '''echo \'This step logs the system into Dockerhub or any of your destination server\'
+echo \'Docker login command --> docker login -u $DOCKERHUB_USERNAME -p DOCKERHUB_PASSWORD\'
+echo \'Refer to the DOCKERHUB_USERNAME & DOCKERHUB_PASSWORD env variables in settings\''''
       }
     }
 
