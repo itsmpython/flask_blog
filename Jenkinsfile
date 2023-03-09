@@ -38,7 +38,7 @@ pipeline {
       steps {
         sh '''echo \'This step logs the system into Dockerhub or any of your destination server\'
 echo \'Docker login command --> docker login -u $DOCKERHUB_USERNAME -p DOCKERHUB_PASSWORD\'
-echo \'Refer to the DOCKERHUB_USERNAME & DOCKERHUB_PASSWORD env variables in settings\''''
+echo \'Refer to the $DOCKERHUB_USERNAME & $DOCKERHUB_PASSWORD env variables in settings\''''
       }
     }
 
