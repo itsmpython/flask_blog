@@ -24,5 +24,11 @@ pipeline {
       }
     }
 
+    stage('Build') {
+      steps {
+        sh 'dockere build Dockerfile .'
+      }
+    }
+
   }
 }
