@@ -15,9 +15,9 @@ pipeline {
           }
         }
 
-        stage('') {
+        stage('Parallel Stage Print') {
           steps {
-            mail(subject: 'From Jenkins - FCC', body: 'This is a test email. Please ignore', from: 'jenkins@fcc-arjun.com', to: 'mallikarjun.somanakatti@gmail.com')
+            echo 'From within Parallel Stage'
           }
         }
 
