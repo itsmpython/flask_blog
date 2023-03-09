@@ -30,5 +30,11 @@ pipeline {
       }
     }
 
+    stage('Login to Dockerhub') {
+      steps {
+        sh 'echo \'This step logs system into Dockerhub or any of your destination server\''
+      }
+    }
+
   }
 }
